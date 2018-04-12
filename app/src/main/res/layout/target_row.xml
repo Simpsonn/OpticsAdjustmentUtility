@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/listViewBackground">
+
+    <ImageView
+        android:id="@+id/target_row_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/b_27"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/target_row_title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Target Name"
+        android:textColor="@color/textMain"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_toEndOf="@id/target_row_image_view"
+        android:layout_alignParentTop="true"
+        android:paddingStart="30dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/target_row_description_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Target Description"
+        android:textColor="@color/textHint"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:layout_toEndOf="@id/target_row_image_view"
+        android:paddingStart="30dp"
+        android:layout_below="@id/target_row_title_text_view"/>
+
+</RelativeLayout>

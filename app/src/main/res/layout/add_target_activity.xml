@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/add_target_fragment_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/add_target_fragment_take_picture_btn"
+        android:contentDescription="@string/add_target_content_description"
+        android:layout_margin="5dp"
+        android:background="@drawable/image_view_border"/>
+
+    <Button
+        android:id="@+id/add_target_fragment_take_picture_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/add_target_fragment_name_layout"
+        android:text="@string/add_target_take_picture" />
+
+    <!-- Target Name -->
+    <LinearLayout
+        android:id="@+id/add_target_fragment_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_above="@id/add_target_fragment_height_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_target_target_name"
+            android:textColor="@color/textMain"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/add_target_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:inputType="text"/>
+
+    </LinearLayout>
+
+    <!-- Target Dimensions -->
+    <LinearLayout
+        android:id="@+id/add_target_fragment_height_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_above="@id/add_target_buttons_layout">
+
+        <!-- Target Width -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/textMain"
+                android:text="@string/add_target_target_width"/>
+
+            <EditText
+                android:id="@+id/add_target_width_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add_target_dimensions_hint"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:maxLength="5" />
+
+        </LinearLayout>
+
+        <!-- Target Height -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/textMain"
+                android:text="@string/add_target_target_height"/>
+
+            <EditText
+                android:id="@+id/add_target_height_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add_target_dimensions_hint"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:maxLength="5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:id="@+id/add_target_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/add_target_add_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_target_add_target"/>
+
+        <Button
+            android:id="@+id/add_target_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_target_cancel"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

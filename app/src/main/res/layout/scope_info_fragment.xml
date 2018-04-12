@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/scope_fragment_welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@color/textMain"
+        android:textAlignment="center"
+        android:text="@string/scope_welcome"/>
+
+    <TextView
+        android:id="@+id/scope_hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scope_fragment_welcome_text"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="@color/textHint"
+        android:text="@string/scope_hint"/>
+
+    <LinearLayout
+        android:id="@+id/scope_moa_or_mils_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/scope_hint_text"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/scope_moa_or_mils"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/textMain"
+            android:text="@string/scope_moa_or_mils_textview"/>
+
+            <Spinner
+                android:id="@+id/scope_moa_or_mils_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:entries="@array/scope_moa_or_mils_array" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scope_increments_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/scope_moa_or_mils_layout">
+
+        <LinearLayout
+            android:id="@+id/scope_increments_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/scope_increments_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/textMain"
+                android:textSize="18sp"
+                android:text="@string/scope_moa_increments_textview"/>
+
+                <Spinner
+                    android:id="@+id/moa_increments_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:entries="@array/scope_moa_increments_array" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/moa_hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textHint"
+            android:text="@string/scope_moa_hint"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scope_increments_info_layout">
+
+        <Button
+            android:id="@+id/to_targets_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/AppTheme.RoundedCornerButton"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="@color/textBlack"
+            android:text="@string/next" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

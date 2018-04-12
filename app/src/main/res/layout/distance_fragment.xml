@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/distance_fragment_welcome_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/textMain"
+        android:text="@string/distance_fragment_welcome"/>
+
+    <LinearLayout
+        android:id="@+id/distance_fragment_arguments_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/distance_fragment_welcome_textview"
+        android:layout_marginTop="20dp"
+        android:background="@color/primaryInputBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/distance_fragment_yards_or_meters_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/textMain"
+                android:text="@string/distance_fragment_yards_or_meters"/>
+
+            <Spinner
+                android:id="@+id/distance_fragment_yards_or_meters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:entries="@array/manual_calc_distance_array"
+                style="@style/Widget.AppCompat.Spinner.Underlined"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:textSize="18sp"
+                android:textColor="@color/textMain"
+                android:text="@string/distance_fragment_distance"/>
+
+            <EditText
+                android:id="@+id/distance_fragment_distance_edit_text"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="40dp"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:maxLength="8"
+                android:hint="@string/manual_calc_distance_hint"/>
+
+            <TextView
+                android:id="@+id/distance_fragment_unit_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/textMain"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:text="@string/distance_fragment_yards_meters"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/distance_fragment_arguments_layout">
+
+        <Button
+            android:id="@+id/distance_fragment_next_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/AppTheme.RoundedCornerButton"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="@color/textBlack"
+            android:text="@string/distance_fragment_zero_scope"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

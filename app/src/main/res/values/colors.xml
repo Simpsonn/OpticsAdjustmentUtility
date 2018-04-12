@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2B2B2B</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="actionBarColor">#2B2B2B</color>
+    <color name="background">#2F2F2F</color>
+    <color name="primaryOutputBackground">#DCDCDC</color>
+    <color name="primaryInputBackground">#393939</color>
+    <color name="listViewBackground">#343434</color>
+    <color name="textMain">#FFF</color>
+    <color name="textHint">#999</color>
+    <color name="textBlack">#000</color>
+</resources>
